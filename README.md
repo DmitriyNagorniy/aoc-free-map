@@ -24,7 +24,7 @@ A standalone, browser-based interactive map application for tracking resources i
 ### Option 1: Use GitHub Pages (Easiest - No Setup Required)
 
 If this repository is hosted on GitHub Pages, you can access it directly:
-- Visit: `https://YOUR_USERNAME.github.io/aoc-free-map/`
+- Visit: `[https://YOUR_USERNAME.github.io/aoc-free-map/](https://dmitriynagorniy.github.io/aoc-free-map/)`
 - No installation or setup needed!
 - All features work in the browser
 
