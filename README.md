@@ -5,7 +5,9 @@ A standalone, browser-based interactive map application for tracking resources i
 ## Features
 
 - 🗺️ **Interactive Map**: Click anywhere to add resource markers
-- 🎯 **Resource Categories**: Organize markers by type (Lumber, Mining, Herbalism) and tier (T1, T2, T3)
+- 🎯 **Resource Categories**: Organize markers by type (Lumber, Mining, Herbalism, Hunting) and tier (T1, T2, T3)
+- 🔍 **Advanced Filtering**: Filter markers by group, tier, or specific resource name
+- 🛣️ **Route Optimization**: Calculate optimal collection routes with smooth curved paths
 - 💾 **Local Storage**: Markers are automatically saved in your browser
 - 📤 **Export/Import**: Share your markers with friends via JSON files
 - 🎨 **Color-Coded Markers**: Visual distinction by tier (Green=T1, Blue=T2, Orange=T3)
@@ -55,7 +57,7 @@ Then open the URL shown in the terminal (usually `http://localhost:8080`)
 ### Adding Markers
 
 1. **Click on the map** where you want to place a marker
-2. **Select Resource Group**: Choose from Lumber 🌳, Mining 🪨, or Herbalism 🌿
+2. **Select Resource Group**: Choose from Lumber 🌳, Mining 🪨, Herbalism 🌿, or Hunting 🐺
 3. **Select Tier**: Choose T1, T2, or T3
 4. **Select Resource**: Pick the specific resource from the list
 5. The marker is automatically created with the appropriate icon and color
@@ -66,6 +68,7 @@ Then open the URL shown in the terminal (usually `http://localhost:8080`)
   - 🌳 Lumber
   - 🪨 Mining  
   - 🌿 Herbalism
+  - 🐺 Hunting
 
 - **Colors**: Markers are color-coded by tier
   - 🟢 Green = T1
@@ -77,6 +80,24 @@ Then open the URL shown in the terminal (usually `http://localhost:8080`)
 - **Delete Single Marker**: Click the marker → Click "Delete Marker" button
 - **Delete via Right-Click**: Right-click near a marker to remove it
 - **Clear All**: Click "Clear All Markers" (automatically exports a backup first)
+
+### Filtering Markers
+
+- **Filter by Group**: Show only markers from a specific resource group
+- **Filter by Tier**: Show only markers of a specific tier level
+- **Filter by Resource**: Show only a specific resource type
+- **Combined Filters**: Use multiple filters together for precise filtering
+- **Real-Time Updates**: Markers show/hide instantly as you change filters
+- **Clear Filters**: One-click button to reset all filters
+
+### Route Optimization
+
+- **Calculate Optimal Route**: Click "Calculate Route" to find the shortest path through visible markers
+- **Smart Algorithms**: Uses Nearest Neighbor + 2-opt improvement for optimal routes
+- **Smooth Curved Paths**: Beautiful Catmull-Rom spline curves that pass near markers
+- **Route Information**: See total distance (km) and number of markers in route
+- **Filtered Routes**: Calculate routes only for filtered markers
+- **Auto-Fit View**: Map automatically adjusts to show the entire route
 
 ### Export/Import
 
@@ -95,9 +116,23 @@ Then open the URL shown in the terminal (usually `http://localhost:8080`)
 ```
 aoc-free-map/
 ├── index.html          # Main application file
+├── scripts/            # Modular JavaScript files
+│   ├── config.js      # Configuration and utilities
+│   ├── resources.js   # Resource data and constants
+│   ├── map.js         # Map initialization and tile handling
+│   ├── markers.js     # Marker management
+│   ├── storage.js     # Data persistence
+│   ├── modal.js       # UI modals
+│   ├── filters.js     # Filtering functionality
+│   ├── route.js       # Route optimization
+│   └── main.js        # Event handlers and initialization
 ├── tiles/              # Map tile images (downloaded separately)
 │   └── 20250826/      # Tile date folder
 │       └── {z}/{x}/{y}.webp
+├── test/               # Testing tools
+│   ├── generate-test-markers.js  # Test data generator
+│   └── test-markers.json         # Sample test data
+├── RELEASE_NOTES.md   # Release notes and changelog
 └── README.md          # This file
 ```
 
@@ -137,10 +172,13 @@ If map tiles don't appear:
 
 ## Technical Details
 
-- **Framework**: Pure JavaScript (no build process)
+- **Framework**: Pure JavaScript (no build process, no dependencies)
 - **Map Library**: Leaflet.js 1.9.4
 - **Storage**: Browser localStorage API
 - **File Format**: JSON for export/import
+- **Architecture**: Modular code structure for maintainability
+- **Route Algorithms**: Nearest Neighbor + 2-opt improvement
+- **Spline Interpolation**: Catmull-Rom splines for smooth routes
 
 ## Contributing
 
