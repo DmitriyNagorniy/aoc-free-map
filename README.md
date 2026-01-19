@@ -16,7 +16,14 @@ A standalone, browser-based interactive map application for tracking resources i
 
 ## Quick Start
 
-### Option 1: Direct File Opening (Simplest)
+### Option 1: Use GitHub Pages (Easiest - No Setup Required)
+
+If this repository is hosted on GitHub Pages, you can access it directly:
+- Visit: `https://YOUR_USERNAME.github.io/aoc-free-map/`
+- No installation or setup needed!
+- All features work in the browser
+
+### Option 2: Direct File Opening (Local)
 
 1. **Download the project**
    ```bash
@@ -32,7 +39,7 @@ A standalone, browser-based interactive map application for tracking resources i
    - Click on the map to add markers
    - Select resource type, tier, and specific resource from the modal
 
-### Option 2: Local Web Server (Recommended for Best Experience)
+### Option 3: Local Web Server (Recommended for Development)
 
 If you encounter CORS issues or want the best performance, use a local web server:
 
@@ -110,6 +117,33 @@ Then open the URL shown in the terminal (usually `http://localhost:8080`)
 - Markers are **automatically saved** to browser localStorage
 - Your markers persist across browser sessions
 - No internet connection required after initial load
+
+## GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Automatic Deployment
+
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Setup GitHub Pages"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**
+   - Go to your repository → **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Your site will be live at:**
+   ```
+   https://YOUR_USERNAME.github.io/aoc-free-map/
+   ```
+
+The site will automatically update whenever you push changes to the `main` branch.
+
+For detailed setup instructions, see [.github/pages-setup.md](.github/pages-setup.md)
 
 ## Project Structure
 
