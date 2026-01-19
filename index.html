@@ -70,6 +70,46 @@
             flex-wrap: wrap;
         }
         
+        .controls-center {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        .filter-group label {
+            font-size: 12px;
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        .filter-group select {
+            padding: 8px 12px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 13px;
+            background: white;
+            color: #495057;
+            cursor: pointer;
+            min-width: 120px;
+        }
+        
+        .filter-group select:hover {
+            border-color: #667eea;
+        }
+        
+        .filter-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+        }
+        
         .controls button {
             padding: 10px 20px;
             background: #667eea;
@@ -295,6 +335,29 @@
             <button onclick="addMarkerAtCenter()">Add Marker at Center</button>
             <button onclick="clearMarkers()">Clear All Markers</button>
         </div>
+        <div class="controls-center">
+            <div class="filter-group">
+                <label for="filterGroup">Group:</label>
+                <select id="filterGroup" onchange="applyFilters()">
+                    <option value="">All Groups</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterTier">Tier:</label>
+                <select id="filterTier" onchange="applyFilters()">
+                    <option value="">All Tiers</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterResource">Resource:</label>
+                <select id="filterResource" onchange="applyFilters()">
+                    <option value="">All Resources</option>
+                </select>
+            </div>
+            <button onclick="clearFilters()" style="background: #6c757d; padding: 8px 15px; font-size: 13px;">Clear Filters</button>
+            <button onclick="calculateOptimalRoute()" style="background: #ff6b35; padding: 8px 15px; font-size: 13px; font-weight: bold;">Calculate Route</button>
+            <button onclick="clearRoute()" style="background: #6c757d; padding: 8px 15px; font-size: 13px;">Clear Route</button>
+        </div>
         <div class="controls-right">
             <button onclick="exportMarkers()" style="background: #28a745;">Export Markers</button>
             <button onclick="importMarkers()" style="background: #17a2b8;">Import Markers</button>
@@ -344,722 +407,14 @@
         </div>
     </div>
     
-    <script>
-        // Helper function to convert tile coordinates to lat/lng
-        function tileToLatLng(x, y, z) {
-            const n = Math.pow(2, z);
-            const lon_deg = x / n * 360.0 - 180.0;
-            const lat_rad = Math.atan(Math.sinh(Math.PI * (1 - 2 * y / n)));
-            const lat_deg = lat_rad * 180.0 / Math.PI;
-            return [lat_deg, lon_deg];
-        }
-        
-        // Configuration - Based on downloaded tiles
-        // Original tile: z=5, x=8, y=14
-        const TILE_CONFIG = {
-            date: '20250826',
-            baseUrl: 'tiles',
-            // Calculate center from tile coordinates (z=5, x=8, y=14)
-            centerTile: { z: 5, x: 8, y: 14 },
-            initialZoom: 5,
-            minZoom: 4,
-            maxZoom: 6
-        };
-        
-        // Calculate center coordinates from tile
-        const centerCoords = tileToLatLng(
-            TILE_CONFIG.centerTile.x + 0.5, 
-            TILE_CONFIG.centerTile.y + 0.5, 
-            TILE_CONFIG.centerTile.z
-        );
-        
-        // Initialize the map
-        const map = L.map('map').setView(centerCoords, TILE_CONFIG.initialZoom);
-        
-        let markers = [];
-        let markerCounter = 0;
-        let pendingMarkerLocation = null;
-        let currentStep = 1;
-        let selectedGroup = null;
-        let selectedGrade = null;
-        let selectedResource = null;
-        
-        // Resource data structure - parsed from JSON
-        // Type mapping: 🪨 = Mining, 🌳 = Lumber, 🌿 = Herbalism
-        const RESOURCES = {
-            'Lumber': {
-                'T1': ['Plumeria Wood'],
-                'T2': ['Weeping Willow', 'Eddledom', 'Dragon Tree'],
-                'T3': ['Braidwood', "Korn'brolach Fir", 'Cacao Wood', 'Joshua']
-            },
-            'Mining': {
-                'T2': ['Slate', 'Lumadon', 'Resonite', 'Halcyonite' , 'Coveglass'],
-                'T3': ['Limestone', 'Rividium', 'Mourning Slate', 'Wyrdstone' , 'Nestone', 'Ochroah', 'Scalestone']
-            },
-            'Herbalism': {
-                'T1': ['Elephant Ear'],
-                'T2': ['Moonbell', 'Giant Bluebell', 'Salvewort', 'Bird of Paradise', 'Paintbrush', 'Barrel Cactus'],
-                'T3': ['Fungal Anemone', 'Spindlevine', 'Furnace Moss', 'Gloomy Pross', 'Grve Lily', 'Fumitor', 'Giant\'s Toe']
-            }
-        };
-        
-        // Icon emojis for different resource groups
-        const GROUP_ICONS = {
-            'Lumber': '🌳',
-            'Mining': '🪨',
-            'Herbalism': '🌿'
-        };
-        
-        // Tier-based colors
-        const TIER_COLORS = {
-            'T1': '#4CAF50',  // Green
-            'T2': '#2196F3',  // Blue
-            'T3': '#FF9800'   // Orange
-        };
-        
-        // Create custom icon with icon emoji and tier-based color
-        function createCustomIcon(tier, iconEmoji = null) {
-            const color = tier ? TIER_COLORS[tier] || '#667eea' : '#667eea';
-            
-            const iconDisplay = iconEmoji ? `<div style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(45deg);
-                font-size: 16px;
-                pointer-events: none;
-                z-index: 10;
-                line-height: 1;
-            ">${iconEmoji}</div>` : '';
-            
-            return L.divIcon({
-                className: 'custom-marker-icon',
-                html: `<div style="
-                    position: relative;
-                    background-color: ${color};
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 50% 50% 50% 0;
-                    transform: rotate(-45deg);
-                    border: 3px solid white;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-                ">${iconDisplay}</div>`,
-                iconSize: [32, 32],
-                iconAnchor: [16, 32],
-                popupAnchor: [0, -32]
-            });
-        }
-        
-        // Override Leaflet's createTile to suppress errors before they happen
-        const originalCreateTile = L.GridLayer.prototype.createTile;
-        L.GridLayer.prototype.createTile = function(coords, done) {
-            const tile = originalCreateTile.call(this, coords, done);
-            
-            if (tile && tile.tagName === 'IMG') {
-                // Store tile layer reference
-                const layer = this;
-                
-                // Add error handler immediately to suppress console errors
-                const errorHandler = function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    e.stopImmediatePropagation();
-                    // Use error tile if available
-                    if (layer && layer.options && layer.options.errorTileUrl) {
-                        this.src = layer.options.errorTileUrl;
-                    } else {
-                        // Use transparent pixel as fallback
-                        this.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
-                    }
-                    return false;
-                };
-                
-                // Set onerror BEFORE setting src to catch errors early
-                tile.onerror = errorHandler;
-                
-                // Also add event listener with capture phase
-                tile.addEventListener('error', errorHandler, true);
-            }
-            
-            return tile;
-        };
-        
-        // Add local tile layer (from downloaded tiles)
-        const tileLayer = L.tileLayer(`${TILE_CONFIG.baseUrl}/${TILE_CONFIG.date}/{z}/{x}/{y}.webp`, {
-            attribution: '',
-            minZoom: TILE_CONFIG.minZoom,
-            maxZoom: TILE_CONFIG.maxZoom,
-            tileSize: 256,
-            zoomOffset: 0,
-            // Show a transparent/blank tile for missing tiles instead of error
-            errorTileUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
-            noWrap: false
-        });
-        
-        // Store reference for error handlers
-        tileLayer.on('tileloadstart', function(e) {
-            if (e.tile && e.tile.tagName === 'IMG') {
-                e.tile._tileLayer = tileLayer;
-            }
-        });
-        
-        tileLayer.addTo(map);
-        
-        // Suppress tile loading errors in console
-        tileLayer.on('tileerror', function(error, tile) {
-            // Silently handle missing tiles
-            if (tile && tile.img) {
-                tile.img.onerror = function() {
-                    // Suppress error - do nothing
-                    return false;
-                };
-            }
-        });
-        
-        // Intercept and suppress tile-related console errors
-        const originalError = console.error;
-        const originalWarn = console.warn;
-        
-        console.error = function(...args) {
-            const message = args.join(' ');
-            // Filter out tile-related file not found errors
-            if (message.includes('tiles/') && 
-                (message.includes('ERR_FILE_NOT_FOUND') || 
-                 message.includes('Failed to load') ||
-                 message.includes('404') ||
-                 message.includes('net::ERR_FILE_NOT_FOUND') ||
-                 message.includes('GET file://'))) {
-                return; // Suppress this error
-            }
-            // Log other errors normally
-            originalError.apply(console, args);
-        };
-        
-        console.warn = function(...args) {
-            const message = args.join(' ');
-            // Filter out tile-related warnings
-            if (message.includes('tiles/') && 
-                (message.includes('Failed to load') ||
-                 message.includes('404'))) {
-                return; // Suppress this warning
-            }
-            // Log other warnings normally
-            originalWarn.apply(console, args);
-        };
-        
-        // Catch unhandled image load errors at the window level
-        window.addEventListener('error', function(e) {
-            if (e.target && e.target.tagName === 'IMG' && 
-                e.target.src && e.target.src.includes('tiles/')) {
-                e.preventDefault();
-                e.stopPropagation();
-                e.stopImmediatePropagation();
-                return false;
-            }
-        }, true);
-        
-        
-        // Add click event to map
-        map.on('click', function(e) {
-            const lat = e.latlng.lat;
-            const lng = e.latlng.lng;
-            pendingMarkerLocation = { lat, lng };
-            openModal();
-        });
-        
-        // Add context menu (right-click) to remove markers
-        map.on('contextmenu', function(e) {
-            e.originalEvent.preventDefault(); // Prevent default browser context menu
-            e.originalEvent.stopPropagation();
-            
-            // Get click point in pixels
-            const clickPoint = map.latLngToContainerPoint(e.latlng);
-            
-            // Find and remove the closest marker using pixel distance
-            let closestMarker = null;
-            let minPixelDistance = Infinity;
-            const pixelThreshold = 50; // pixels - how close you need to click
-            
-            markers.forEach(marker => {
-                const markerPoint = map.latLngToContainerPoint(marker.getLatLng());
-                const dx = clickPoint.x - markerPoint.x;
-                const dy = clickPoint.y - markerPoint.y;
-                const pixelDistance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (pixelDistance < minPixelDistance && pixelDistance < pixelThreshold) {
-                    minPixelDistance = pixelDistance;
-                    closestMarker = marker;
-                }
-            });
-            
-            if (closestMarker) {
-                map.removeLayer(closestMarker);
-                markers = markers.filter(m => m !== closestMarker);
-                saveMarkersToLocalStorage(); // Update localStorage after removal
-            }
-            
-            return false; // Prevent default context menu
-        });
-        
-        // Add marker function
-        function addMarker(lat, lng, resourceData = null) {
-            const title = resourceData ? 
-                `${resourceData.group} ${resourceData.grade} - ${resourceData.resource}` : 
-                `Marker ${++markerCounter}`;
-            
-            const iconEmoji = resourceData ? GROUP_ICONS[resourceData.group] : null;
-            const tier = resourceData ? resourceData.grade : null;
-            const marker = L.marker([lat, lng], { icon: createCustomIcon(tier, iconEmoji) }).addTo(map);
-            
-            // Create popup content with delete button
-            const popupContent = document.createElement('div');
-            popupContent.style.textAlign = 'center';
-            popupContent.innerHTML = `
-                <strong>${title}</strong><br>
-                ${resourceData ? `<small>${resourceData.group} • ${resourceData.grade}</small><br>` : ''}
-                <small>Coordinates: ${lat.toFixed(6)}, ${lng.toFixed(6)}</small><br>
-                <button class="delete-marker-btn" 
-                        style="margin-top: 8px; padding: 5px 15px; background: #dc3545; color: white; 
-                               border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">
-                    Delete Marker
-                </button>
-            `;
-            
-            // Add click handler to delete button
-            const deleteBtn = popupContent.querySelector('.delete-marker-btn');
-            deleteBtn.addEventListener('click', function() {
-                removeMarker(marker);
-            });
-            
-            marker.bindPopup(popupContent);
-            marker.resourceData = resourceData; // Store resource data with marker
-            
-            markers.push(marker);
-            
-            // Save to localStorage whenever a marker is added
-            saveMarkersToLocalStorage();
-            
-            return marker;
-        }
-        
-        // Remove a specific marker
-        function removeMarker(marker) {
-            if (marker && markers.includes(marker)) {
-                map.removeLayer(marker);
-                markers = markers.filter(m => m !== marker);
-                map.closePopup();
-                saveMarkersToLocalStorage();
-            }
-        }
-        
-        // Add marker at center
-        function addMarkerAtCenter() {
-            const center = map.getCenter();
-            pendingMarkerLocation = { lat: center.lat, lng: center.lng };
-            openModal();
-        }
-        
-        // Save markers to localStorage
-        function saveMarkersToLocalStorage() {
-            const markersData = markers.map(marker => {
-                const latlng = marker.getLatLng();
-                return {
-                    lat: latlng.lat,
-                    lng: latlng.lng,
-                    resourceData: marker.resourceData
-                };
-            });
-            try {
-                localStorage.setItem('aocMapMarkers', JSON.stringify(markersData));
-                console.log('Markers saved to localStorage');
-            } catch (e) {
-                console.error('Error saving to localStorage:', e);
-            }
-        }
-        
-        // Load markers from localStorage
-        function loadMarkersFromLocalStorage() {
-            try {
-                const saved = localStorage.getItem('aocMapMarkers');
-                if (saved) {
-                    const markersData = JSON.parse(saved);
-                    markersData.forEach(data => {
-                        addMarker(data.lat, data.lng, data.resourceData || null);
-                    });
-                    console.log(`Loaded ${markersData.length} markers from localStorage`);
-                }
-            } catch (e) {
-                console.error('Error loading from localStorage:', e);
-            }
-        }
-        
-        // Export markers to JSON file (internal function)
-        function exportMarkersToFile(silent = false) {
-            if (markers.length === 0) {
-                if (!silent) {
-                    alert('No markers to export.');
-                }
-                return false;
-            }
-            
-            const markersData = markers.map(marker => {
-                const latlng = marker.getLatLng();
-                return {
-                    lat: latlng.lat,
-                    lng: latlng.lng,
-                    resourceData: marker.resourceData,
-                    title: marker.resourceData ? 
-                        `${marker.resourceData.group} ${marker.resourceData.grade} - ${marker.resourceData.resource}` : 
-                        'Custom Marker'
-                };
-            });
-            
-            const dataStr = JSON.stringify(markersData, null, 2);
-            const dataBlob = new Blob([dataStr], { type: 'application/json' });
-            const url = URL.createObjectURL(dataBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0] + '_' + 
-                             new Date().toTimeString().split(' ')[0].replace(/:/g, '-');
-            link.download = `aoc-map-markers-${timestamp}.json`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-            return true;
-        }
-        
-        // Export markers to JSON file (public function)
-        function exportMarkers() {
-            exportMarkersToFile(false);
-        }
-        
-        // Import markers from JSON file
-        function importMarkers() {
-            document.getElementById('importFile').click();
-        }
-        
-        // Handle file import
-        function handleFileImport(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-            
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const markersData = JSON.parse(e.target.result);
-                    
-                    if (!Array.isArray(markersData)) {
-                        alert('Invalid file format. Expected an array of markers.');
-                        return;
-                    }
-                    
-                    if (markersData.length === 0) {
-                        alert('File is empty.');
-                        return;
-                    }
-                    
-                    if (confirm(`Import ${markersData.length} markers? This will add them to your current markers.`)) {
-                        markersData.forEach(data => {
-                            if (data.lat && data.lng) {
-                                addMarker(data.lat, data.lng, data.resourceData || null);
-                            }
-                        });
-                        saveMarkersToLocalStorage();
-                        alert(`Successfully imported ${markersData.length} markers!`);
-                    }
-                } catch (error) {
-                    alert('Error parsing JSON file: ' + error.message);
-                    console.error('Import error:', error);
-                }
-            };
-            reader.readAsText(file);
-            
-            // Reset file input
-            event.target.value = '';
-        }
-        
-        // Modal functions
-        function openModal() {
-            const modal = document.getElementById('markerModal');
-            modal.style.display = 'block';
-            currentStep = 1;
-            selectedGroup = null;
-            selectedGrade = null;
-            selectedResource = null;
-            initializeModal();
-        }
-        
-        function closeModal() {
-            const modal = document.getElementById('markerModal');
-            modal.style.display = 'none';
-            pendingMarkerLocation = null;
-        }
-        
-        function initializeModal() {
-            showStep(1);
-            loadGroupOptions();
-        }
-        
-        function showStep(step) {
-            // Hide all steps
-            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-            
-            // Show current step
-            document.getElementById(`step${step}`).classList.add('active');
-            
-            // Update modal title
-            const titles = {
-                1: 'Select Resource Type',
-                2: `Select Grade - ${selectedGroup || ''}`,
-                3: `Select Resource - ${selectedGroup || ''} ${selectedGrade || ''}`
-            };
-            document.getElementById('modalTitle').textContent = titles[step] || 'Select Resource Type';
-            
-            // Update buttons
-            const btnBack = document.getElementById('btnBack');
-            const btnNext = document.getElementById('btnNext');
-            
-            btnBack.style.display = step > 1 ? 'inline-block' : 'none';
-            // Hide Next button since we auto-advance
-            btnNext.style.display = 'none';
-        }
-        
-        function loadGroupOptions() {
-            const container = document.getElementById('groupOptions');
-            container.innerHTML = '';
-            
-            Object.keys(RESOURCES).forEach(group => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.textContent = group;
-                btn.onclick = () => selectGroup(group);
-                container.appendChild(btn);
-            });
-        }
-        
-        function selectGroup(group) {
-            selectedGroup = group;
-            selectedGrade = null;
-            selectedResource = null;
-            
-            // Update UI
-            document.querySelectorAll('#groupOptions .option-btn').forEach(btn => {
-                btn.classList.remove('selected');
-                if (btn.textContent === group) {
-                    btn.classList.add('selected');
-                }
-            });
-            
-            // Auto-advance to next step
-            setTimeout(() => {
-                currentStep = 2;
-                loadGradeOptions();
-                showStep(2);
-            }, 50); // Small delay for visual feedback
-        }
-        
-        function nextStep() {
-            if (currentStep === 1 && selectedGroup) {
-                currentStep = 2;
-                loadGradeOptions();
-                showStep(2);
-            } else if (currentStep === 2 && selectedGrade) {
-                currentStep = 3;
-                loadResourceOptions();
-                showStep(3);
-            } else if (currentStep === 3 && selectedResource) {
-                createMarkerFromSelection();
-            }
-        }
-        
-        function previousStep() {
-            if (currentStep > 1) {
-                currentStep--;
-                if (currentStep === 1) {
-                    loadGroupOptions();
-                } else if (currentStep === 2) {
-                    loadGradeOptions();
-                }
-                showStep(currentStep);
-            }
-        }
-        
-        function loadGradeOptions() {
-            const container = document.getElementById('gradeOptions');
-            container.innerHTML = '';
-            
-            if (selectedGroup && RESOURCES[selectedGroup]) {
-                // Sort grades: T1, T2, T3 (or T0 if exists)
-                const grades = Object.keys(RESOURCES[selectedGroup]).sort((a, b) => {
-                    const numA = parseInt(a.replace('T', ''));
-                    const numB = parseInt(b.replace('T', ''));
-                    return numA - numB;
-                });
-                
-                grades.forEach(grade => {
-                    const btn = document.createElement('button');
-                    btn.className = 'option-btn';
-                    btn.textContent = grade;
-                    btn.onclick = () => selectGrade(grade);
-                    container.appendChild(btn);
-                });
-            }
-        }
-        
-        function selectGrade(grade) {
-            selectedGrade = grade;
-            selectedResource = null;
-            
-            // Update UI
-            document.querySelectorAll('#gradeOptions .option-btn').forEach(btn => {
-                btn.classList.remove('selected');
-                if (btn.textContent === grade) {
-                    btn.classList.add('selected');
-                }
-            });
-            
-            // Auto-advance to next step
-            setTimeout(() => {
-                currentStep = 3;
-                loadResourceOptions();
-                showStep(3);
-            }, 50); // Small delay for visual feedback
-        }
-        
-        function loadResourceOptions() {
-            const container = document.getElementById('resourceOptions');
-            container.innerHTML = '';
-            
-            if (selectedGroup && selectedGrade && RESOURCES[selectedGroup][selectedGrade]) {
-                // Sort resources alphabetically
-                const resources = [...RESOURCES[selectedGroup][selectedGrade]].sort();
-                
-                resources.forEach(resource => {
-                    const btn = document.createElement('button');
-                    btn.className = 'option-btn';
-                    btn.textContent = resource;
-                    btn.onclick = () => selectResource(resource);
-                    container.appendChild(btn);
-                });
-            }
-        }
-        
-        function selectResource(resource) {
-            selectedResource = resource;
-            
-            // Update UI
-            document.querySelectorAll('#resourceOptions .option-btn').forEach(btn => {
-                btn.classList.remove('selected');
-                if (btn.textContent === resource) {
-                    btn.classList.add('selected');
-                }
-            });
-            
-            // Auto-create marker after selection
-            setTimeout(() => {
-                createMarkerFromSelection();
-            }, 50); // Small delay for visual feedback
-        }
-        
-        function createMarkerFromSelection() {
-            if (pendingMarkerLocation && selectedGroup && selectedGrade && selectedResource) {
-                const resourceData = {
-                    group: selectedGroup,
-                    grade: selectedGrade,
-                    resource: selectedResource
-                };
-                
-                addMarker(pendingMarkerLocation.lat, pendingMarkerLocation.lng, resourceData);
-                closeModal();
-            }
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('markerModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-        
-        // Clear all markers
-        function clearMarkers() {
-            if (markers.length === 0) {
-                alert('No markers to clear.');
-                return;
-            }
-            
-            if (confirm(`Are you sure you want to clear all ${markers.length} markers?\n\nA backup will be exported automatically before clearing.`)) {
-                // Export markers before clearing
-                const exported = exportMarkersToFile(true);
-                
-                if (exported) {
-                    // Small delay to ensure file download starts
-                    setTimeout(() => {
-                        markers.forEach(marker => {
-                            map.removeLayer(marker);
-                        });
-                        markers = [];
-                        markerCounter = 0;
-                        saveMarkersToLocalStorage(); // Update localStorage after clearing
-                        alert('Markers cleared. Backup file has been downloaded.');
-                    }, 100);
-                } else {
-                    // If export failed, still clear but warn user
-                    if (confirm('Export failed. Clear markers anyway? (No backup will be saved)')) {
-                        markers.forEach(marker => {
-                            map.removeLayer(marker);
-                        });
-                        markers = [];
-                        markerCounter = 0;
-                        saveMarkersToLocalStorage();
-                    }
-                }
-            }
-        }
-        
-        // Display coordinates and tile info
-        let coordDisplay = null;
-        map.on('mousemove', function(e) {
-            if (!coordDisplay) {
-                coordDisplay = L.control({position: 'bottomright'});
-                coordDisplay.onAdd = function() {
-                    const div = L.DomUtil.create('div', 'coord-display');
-                    div.style.backgroundColor = 'white';
-                    div.style.padding = '8px 12px';
-                    div.style.borderRadius = '5px';
-                    div.style.fontSize = '11px';
-                    div.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
-                    div.style.lineHeight = '1.4';
-                    return div;
-                };
-                coordDisplay.addTo(map);
-            }
-            const lat = e.latlng.lat.toFixed(6);
-            const lng = e.latlng.lng.toFixed(6);
-            const zoom = map.getZoom();
-            
-            // Calculate tile coordinates
-            const n = Math.pow(2, zoom);
-            const x = Math.floor((lng + 180) / 360 * n);
-            const lat_rad = e.latlng.lat * Math.PI / 180;
-            const y = Math.floor((1 - Math.log(Math.tan(lat_rad) + 1 / Math.cos(lat_rad)) / Math.PI) / 2 * n);
-            
-            coordDisplay.getContainer().innerHTML = `
-                <div><strong>Lat:</strong> ${lat}, <strong>Lng:</strong> ${lng}</div>
-                <div><strong>Tile:</strong> z=${zoom}, x=${x}, y=${y}</div>
-            `;
-        });
-        
-        // Load markers from localStorage on page load
-        window.addEventListener('load', function() {
-            // Wait a bit for map to fully initialize
-            setTimeout(() => {
-                loadMarkersFromLocalStorage();
-            }, 500);
-        });
-        
-    </script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/resources.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/markers.js"></script>
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/route.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

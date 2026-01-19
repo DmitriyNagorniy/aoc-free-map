@@ -1,0 +1,1862 @@
+[
+  {
+    "lat": 13.087815,
+    "lng": -92.50771,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T1",
+      "resource": "Plumeria Wood"
+    },
+    "title": "Lumber T1 - Plumeria Wood"
+  },
+  {
+    "lat": 17.450898,
+    "lng": -104.655724,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T1",
+      "resource": "Plumeria Wood"
+    },
+    "title": "Lumber T1 - Plumeria Wood"
+  },
+  {
+    "lat": 29.889517,
+    "lng": -95.345424,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T1",
+      "resource": "Plumeria Wood"
+    },
+    "title": "Lumber T1 - Plumeria Wood"
+  },
+  {
+    "lat": -11.640196,
+    "lng": -43.753921,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T1",
+      "resource": "Plumeria Wood"
+    },
+    "title": "Lumber T1 - Plumeria Wood"
+  },
+  {
+    "lat": -23.807048,
+    "lng": -48.561926,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Weeping Willow"
+    },
+    "title": "Lumber T2 - Weeping Willow"
+  },
+  {
+    "lat": -8.655905,
+    "lng": -55.145233,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Weeping Willow"
+    },
+    "title": "Lumber T2 - Weeping Willow"
+  },
+  {
+    "lat": 24.64372,
+    "lng": -118.909837,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Eddledom"
+    },
+    "title": "Lumber T2 - Eddledom"
+  },
+  {
+    "lat": 7.412195,
+    "lng": -60.692042,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Eddledom"
+    },
+    "title": "Lumber T2 - Eddledom"
+  },
+  {
+    "lat": -11.796879,
+    "lng": -70.596097,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Dragon Tree"
+    },
+    "title": "Lumber T2 - Dragon Tree"
+  },
+  {
+    "lat": 45.348307,
+    "lng": -109.302931,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Dragon Tree"
+    },
+    "title": "Lumber T2 - Dragon Tree"
+  },
+  {
+    "lat": 61.710651,
+    "lng": -94.459393,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T2",
+      "resource": "Dragon Tree"
+    },
+    "title": "Lumber T2 - Dragon Tree"
+  },
+  {
+    "lat": 20.895271,
+    "lng": -84.239993,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Braidwood"
+    },
+    "title": "Lumber T3 - Braidwood"
+  },
+  {
+    "lat": 60.339872,
+    "lng": -102.986681,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Braidwood"
+    },
+    "title": "Lumber T3 - Braidwood"
+  },
+  {
+    "lat": 7.707978,
+    "lng": -130.154297,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Braidwood"
+    },
+    "title": "Lumber T3 - Braidwood"
+  },
+  {
+    "lat": 23.611033,
+    "lng": -95.657191,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Braidwood"
+    },
+    "title": "Lumber T3 - Braidwood"
+  },
+  {
+    "lat": 8.904059,
+    "lng": -104.948002,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Korn'brolach Fir"
+    },
+    "title": "Lumber T3 - Korn'brolach Fir"
+  },
+  {
+    "lat": -16.147475,
+    "lng": -93.096979,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Korn'brolach Fir"
+    },
+    "title": "Lumber T3 - Korn'brolach Fir"
+  },
+  {
+    "lat": -1.887234,
+    "lng": -119.055443,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Korn'brolach Fir"
+    },
+    "title": "Lumber T3 - Korn'brolach Fir"
+  },
+  {
+    "lat": 3.039637,
+    "lng": -103.312699,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Korn'brolach Fir"
+    },
+    "title": "Lumber T3 - Korn'brolach Fir"
+  },
+  {
+    "lat": -21.390007,
+    "lng": -123.699448,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Korn'brolach Fir"
+    },
+    "title": "Lumber T3 - Korn'brolach Fir"
+  },
+  {
+    "lat": 5.604839,
+    "lng": -108.413749,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Cacao Wood"
+    },
+    "title": "Lumber T3 - Cacao Wood"
+  },
+  {
+    "lat": 13.245114,
+    "lng": -60.5539,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Cacao Wood"
+    },
+    "title": "Lumber T3 - Cacao Wood"
+  },
+  {
+    "lat": 35.611407,
+    "lng": -110.191456,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Joshua"
+    },
+    "title": "Lumber T3 - Joshua"
+  },
+  {
+    "lat": 23.459617,
+    "lng": -100.738278,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Joshua"
+    },
+    "title": "Lumber T3 - Joshua"
+  },
+  {
+    "lat": 31.114167,
+    "lng": -119.813859,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Joshua"
+    },
+    "title": "Lumber T3 - Joshua"
+  },
+  {
+    "lat": -2.046336,
+    "lng": -50.50886,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Joshua"
+    },
+    "title": "Lumber T3 - Joshua"
+  },
+  {
+    "lat": -3.69465,
+    "lng": -65.647204,
+    "resourceData": {
+      "group": "Lumber",
+      "grade": "T3",
+      "resource": "Joshua"
+    },
+    "title": "Lumber T3 - Joshua"
+  },
+  {
+    "lat": -5.648756,
+    "lng": -138.254143,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Slate"
+    },
+    "title": "Mining T2 - Slate"
+  },
+  {
+    "lat": 20.450322,
+    "lng": -131.936077,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Slate"
+    },
+    "title": "Mining T2 - Slate"
+  },
+  {
+    "lat": -2.658111,
+    "lng": -120.687125,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Lumadon"
+    },
+    "title": "Mining T2 - Lumadon"
+  },
+  {
+    "lat": -10.002976,
+    "lng": -132.552138,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Lumadon"
+    },
+    "title": "Mining T2 - Lumadon"
+  },
+  {
+    "lat": 57.362909,
+    "lng": -127.761706,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Resonite"
+    },
+    "title": "Mining T2 - Resonite"
+  },
+  {
+    "lat": 0.662768,
+    "lng": -106.463898,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Resonite"
+    },
+    "title": "Mining T2 - Resonite"
+  },
+  {
+    "lat": 14.160467,
+    "lng": -133.762139,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Resonite"
+    },
+    "title": "Mining T2 - Resonite"
+  },
+  {
+    "lat": -11.799326,
+    "lng": -51.094391,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Resonite"
+    },
+    "title": "Mining T2 - Resonite"
+  },
+  {
+    "lat": 55.542512,
+    "lng": -122.042338,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Halcyonite"
+    },
+    "title": "Mining T2 - Halcyonite"
+  },
+  {
+    "lat": -8.360363,
+    "lng": -135.094044,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Halcyonite"
+    },
+    "title": "Mining T2 - Halcyonite"
+  },
+  {
+    "lat": 15.204502,
+    "lng": -72.858979,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Halcyonite"
+    },
+    "title": "Mining T2 - Halcyonite"
+  },
+  {
+    "lat": 45.349667,
+    "lng": -120.39281,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Halcyonite"
+    },
+    "title": "Mining T2 - Halcyonite"
+  },
+  {
+    "lat": 11.439436,
+    "lng": -69.400458,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Halcyonite"
+    },
+    "title": "Mining T2 - Halcyonite"
+  },
+  {
+    "lat": -11.504679,
+    "lng": -44.335452,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Coveglass"
+    },
+    "title": "Mining T2 - Coveglass"
+  },
+  {
+    "lat": 59.147141,
+    "lng": -92.789719,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Coveglass"
+    },
+    "title": "Mining T2 - Coveglass"
+  },
+  {
+    "lat": 4.251463,
+    "lng": -126.088248,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T2",
+      "resource": "Coveglass"
+    },
+    "title": "Mining T2 - Coveglass"
+  },
+  {
+    "lat": 52.107997,
+    "lng": -100.297305,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Limestone"
+    },
+    "title": "Mining T3 - Limestone"
+  },
+  {
+    "lat": 44.749023,
+    "lng": -99.413538,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Limestone"
+    },
+    "title": "Mining T3 - Limestone"
+  },
+  {
+    "lat": -10.903977,
+    "lng": -47.794101,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Limestone"
+    },
+    "title": "Mining T3 - Limestone"
+  },
+  {
+    "lat": 22.108583,
+    "lng": -104.504816,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Rividium"
+    },
+    "title": "Mining T3 - Rividium"
+  },
+  {
+    "lat": 60.200512,
+    "lng": -124.891054,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Rividium"
+    },
+    "title": "Mining T3 - Rividium"
+  },
+  {
+    "lat": 9.341197,
+    "lng": -89.94101,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Rividium"
+    },
+    "title": "Mining T3 - Rividium"
+  },
+  {
+    "lat": 2.45778,
+    "lng": -103.154508,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Rividium"
+    },
+    "title": "Mining T3 - Rividium"
+  },
+  {
+    "lat": 11.459487,
+    "lng": -98.503827,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Mourning Slate"
+    },
+    "title": "Mining T3 - Mourning Slate"
+  },
+  {
+    "lat": 3.486739,
+    "lng": -91.612868,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Mourning Slate"
+    },
+    "title": "Mining T3 - Mourning Slate"
+  },
+  {
+    "lat": 0.361992,
+    "lng": -127.303341,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Wyrdstone"
+    },
+    "title": "Mining T3 - Wyrdstone"
+  },
+  {
+    "lat": 17.750835,
+    "lng": -106.755823,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Wyrdstone"
+    },
+    "title": "Mining T3 - Wyrdstone"
+  },
+  {
+    "lat": -17.189471,
+    "lng": -129.554479,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Wyrdstone"
+    },
+    "title": "Mining T3 - Wyrdstone"
+  },
+  {
+    "lat": 38.902444,
+    "lng": -113.207598,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Wyrdstone"
+    },
+    "title": "Mining T3 - Wyrdstone"
+  },
+  {
+    "lat": 48.805883,
+    "lng": -105.547417,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Wyrdstone"
+    },
+    "title": "Mining T3 - Wyrdstone"
+  },
+  {
+    "lat": -11.361885,
+    "lng": -125.194797,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Nestone"
+    },
+    "title": "Mining T3 - Nestone"
+  },
+  {
+    "lat": -3.394768,
+    "lng": -50.486319,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Nestone"
+    },
+    "title": "Mining T3 - Nestone"
+  },
+  {
+    "lat": -18.696048,
+    "lng": -113.495048,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Nestone"
+    },
+    "title": "Mining T3 - Nestone"
+  },
+  {
+    "lat": -0.106765,
+    "lng": -90.848882,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Nestone"
+    },
+    "title": "Mining T3 - Nestone"
+  },
+  {
+    "lat": 5.309235,
+    "lng": -112.90506,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Nestone"
+    },
+    "title": "Mining T3 - Nestone"
+  },
+  {
+    "lat": 25.853931,
+    "lng": -123.095987,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Ochroah"
+    },
+    "title": "Mining T3 - Ochroah"
+  },
+  {
+    "lat": 18.79139,
+    "lng": -71.795817,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Ochroah"
+    },
+    "title": "Mining T3 - Ochroah"
+  },
+  {
+    "lat": -8.806684,
+    "lng": -106.89469,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Ochroah"
+    },
+    "title": "Mining T3 - Ochroah"
+  },
+  {
+    "lat": -11.648868,
+    "lng": -91.305651,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Ochroah"
+    },
+    "title": "Mining T3 - Ochroah"
+  },
+  {
+    "lat": -6.242771,
+    "lng": -67.155836,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Ochroah"
+    },
+    "title": "Mining T3 - Ochroah"
+  },
+  {
+    "lat": 9.798651,
+    "lng": -74.038963,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Scalestone"
+    },
+    "title": "Mining T3 - Scalestone"
+  },
+  {
+    "lat": -1.902065,
+    "lng": -41.214127,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Scalestone"
+    },
+    "title": "Mining T3 - Scalestone"
+  },
+  {
+    "lat": -13.609805,
+    "lng": -139.600306,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Scalestone"
+    },
+    "title": "Mining T3 - Scalestone"
+  },
+  {
+    "lat": 18.954206,
+    "lng": -113.49885,
+    "resourceData": {
+      "group": "Mining",
+      "grade": "T3",
+      "resource": "Scalestone"
+    },
+    "title": "Mining T3 - Scalestone"
+  },
+  {
+    "lat": 3.358689,
+    "lng": -77.34514,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T1",
+      "resource": "Elephant Ear"
+    },
+    "title": "Herbalism T1 - Elephant Ear"
+  },
+  {
+    "lat": 31.685706,
+    "lng": -109.585451,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T1",
+      "resource": "Elephant Ear"
+    },
+    "title": "Herbalism T1 - Elephant Ear"
+  },
+  {
+    "lat": 22.700279,
+    "lng": -97.286114,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Moonbell"
+    },
+    "title": "Herbalism T2 - Moonbell"
+  },
+  {
+    "lat": -16.603861,
+    "lng": -49.290453,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Moonbell"
+    },
+    "title": "Herbalism T2 - Moonbell"
+  },
+  {
+    "lat": 59.001584,
+    "lng": -99.410535,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Moonbell"
+    },
+    "title": "Herbalism T2 - Moonbell"
+  },
+  {
+    "lat": 14.146039,
+    "lng": -87.24785,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Moonbell"
+    },
+    "title": "Herbalism T2 - Moonbell"
+  },
+  {
+    "lat": 19.414584,
+    "lng": -94.892511,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Giant Bluebell"
+    },
+    "title": "Herbalism T2 - Giant Bluebell"
+  },
+  {
+    "lat": -6.389013,
+    "lng": -102.709877,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Giant Bluebell"
+    },
+    "title": "Herbalism T2 - Giant Bluebell"
+  },
+  {
+    "lat": 11.295867,
+    "lng": -116.043313,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Salvewort"
+    },
+    "title": "Herbalism T2 - Salvewort"
+  },
+  {
+    "lat": 62.141004,
+    "lng": -103.607285,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Salvewort"
+    },
+    "title": "Herbalism T2 - Salvewort"
+  },
+  {
+    "lat": 7.707946,
+    "lng": -59.187774,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Salvewort"
+    },
+    "title": "Herbalism T2 - Salvewort"
+  },
+  {
+    "lat": 59.011416,
+    "lng": -115.444056,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Salvewort"
+    },
+    "title": "Herbalism T2 - Salvewort"
+  },
+  {
+    "lat": -15.41328,
+    "lng": -97.589332,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Bird of Paradise"
+    },
+    "title": "Herbalism T2 - Bird of Paradise"
+  },
+  {
+    "lat": 58.53613,
+    "lng": -125.809188,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Bird of Paradise"
+    },
+    "title": "Herbalism T2 - Bird of Paradise"
+  },
+  {
+    "lat": 7.558992,
+    "lng": -121.159833,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Paintbrush"
+    },
+    "title": "Herbalism T2 - Paintbrush"
+  },
+  {
+    "lat": 14.292367,
+    "lng": -114.387953,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Paintbrush"
+    },
+    "title": "Herbalism T2 - Paintbrush"
+  },
+  {
+    "lat": -7.163216,
+    "lng": -113.339822,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Barrel Cactus"
+    },
+    "title": "Herbalism T2 - Barrel Cactus"
+  },
+  {
+    "lat": 24.785053,
+    "lng": -121.297756,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T2",
+      "resource": "Barrel Cactus"
+    },
+    "title": "Herbalism T2 - Barrel Cactus"
+  },
+  {
+    "lat": 1.409859,
+    "lng": -125.941375,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fungal Anemone"
+    },
+    "title": "Herbalism T3 - Fungal Anemone"
+  },
+  {
+    "lat": -4.904038,
+    "lng": -125.648303,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fungal Anemone"
+    },
+    "title": "Herbalism T3 - Fungal Anemone"
+  },
+  {
+    "lat": 21.79082,
+    "lng": -95.514343,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fungal Anemone"
+    },
+    "title": "Herbalism T3 - Fungal Anemone"
+  },
+  {
+    "lat": 51.335312,
+    "lng": -98.950242,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fungal Anemone"
+    },
+    "title": "Herbalism T3 - Fungal Anemone"
+  },
+  {
+    "lat": 58.261606,
+    "lng": -110.49947,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Spindlevine"
+    },
+    "title": "Herbalism T3 - Spindlevine"
+  },
+  {
+    "lat": 2.760961,
+    "lng": -124.759586,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Spindlevine"
+    },
+    "title": "Herbalism T3 - Spindlevine"
+  },
+  {
+    "lat": -13.004135,
+    "lng": -49.309953,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Spindlevine"
+    },
+    "title": "Herbalism T3 - Spindlevine"
+  },
+  {
+    "lat": 10.557422,
+    "lng": -82.310556,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Spindlevine"
+    },
+    "title": "Herbalism T3 - Spindlevine"
+  },
+  {
+    "lat": 54.943653,
+    "lng": -94.590167,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Furnace Moss"
+    },
+    "title": "Herbalism T3 - Furnace Moss"
+  },
+  {
+    "lat": 59.596958,
+    "lng": -94.446087,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Furnace Moss"
+    },
+    "title": "Herbalism T3 - Furnace Moss"
+  },
+  {
+    "lat": -7.461809,
+    "lng": -111.246832,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Furnace Moss"
+    },
+    "title": "Herbalism T3 - Furnace Moss"
+  },
+  {
+    "lat": 11.013048,
+    "lng": -105.863854,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Furnace Moss"
+    },
+    "title": "Herbalism T3 - Furnace Moss"
+  },
+  {
+    "lat": 27.940911,
+    "lng": -108.556092,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Gloomy Pross"
+    },
+    "title": "Herbalism T3 - Gloomy Pross"
+  },
+  {
+    "lat": 9.357213,
+    "lng": -101.788468,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Gloomy Pross"
+    },
+    "title": "Herbalism T3 - Gloomy Pross"
+  },
+  {
+    "lat": 56.61125,
+    "lng": -119.212083,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Gloomy Pross"
+    },
+    "title": "Herbalism T3 - Gloomy Pross"
+  },
+  {
+    "lat": 13.239003,
+    "lng": -62.038224,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Gloomy Pross"
+    },
+    "title": "Herbalism T3 - Gloomy Pross"
+  },
+  {
+    "lat": 2.139905,
+    "lng": -105.409966,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Grve Lily"
+    },
+    "title": "Herbalism T3 - Grve Lily"
+  },
+  {
+    "lat": 2.286772,
+    "lng": -50.046368,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Grve Lily"
+    },
+    "title": "Herbalism T3 - Grve Lily"
+  },
+  {
+    "lat": -22.608606,
+    "lng": -143.639077,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fumitor"
+    },
+    "title": "Herbalism T3 - Fumitor"
+  },
+  {
+    "lat": 20.301119,
+    "lng": -88.010855,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fumitor"
+    },
+    "title": "Herbalism T3 - Fumitor"
+  },
+  {
+    "lat": 31.542474,
+    "lng": -120.694943,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Fumitor"
+    },
+    "title": "Herbalism T3 - Fumitor"
+  },
+  {
+    "lat": -4.014687,
+    "lng": -110.201844,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Giant's Toe"
+    },
+    "title": "Herbalism T3 - Giant's Toe"
+  },
+  {
+    "lat": 22.089811,
+    "lng": -77.813101,
+    "resourceData": {
+      "group": "Herbalism",
+      "grade": "T3",
+      "resource": "Giant's Toe"
+    },
+    "title": "Herbalism T3 - Giant's Toe"
+  },
+  {
+    "lat": 8.757561,
+    "lng": -58.307871,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Grem"
+    },
+    "title": "Hunting T1 - Grem"
+  },
+  {
+    "lat": 45.951295,
+    "lng": -119.940504,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Grem"
+    },
+    "title": "Hunting T1 - Grem"
+  },
+  {
+    "lat": 9.640919,
+    "lng": -69.562908,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Grem"
+    },
+    "title": "Hunting T1 - Grem"
+  },
+  {
+    "lat": 37.248045,
+    "lng": -113.938795,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Grem"
+    },
+    "title": "Hunting T1 - Grem"
+  },
+  {
+    "lat": -16.455957,
+    "lng": -89.638108,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Grem"
+    },
+    "title": "Hunting T1 - Grem"
+  },
+  {
+    "lat": 52.091695,
+    "lng": -92.492689,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Bear"
+    },
+    "title": "Hunting T1 - Bear"
+  },
+  {
+    "lat": 16.388188,
+    "lng": -126.264918,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Bear"
+    },
+    "title": "Hunting T1 - Bear"
+  },
+  {
+    "lat": 41.156748,
+    "lng": -127.288208,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Bear"
+    },
+    "title": "Hunting T1 - Bear"
+  },
+  {
+    "lat": 8.452795,
+    "lng": -81.096987,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Wolf"
+    },
+    "title": "Hunting T1 - Wolf"
+  },
+  {
+    "lat": 39.491323,
+    "lng": -106.308643,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Wolf"
+    },
+    "title": "Hunting T1 - Wolf"
+  },
+  {
+    "lat": 8.156213,
+    "lng": -63.85166,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Wolf"
+    },
+    "title": "Hunting T1 - Wolf"
+  },
+  {
+    "lat": 0.49446,
+    "lng": -42.552884,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Raven"
+    },
+    "title": "Hunting T1 - Raven"
+  },
+  {
+    "lat": 0.189096,
+    "lng": -52.30105,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Raven"
+    },
+    "title": "Hunting T1 - Raven"
+  },
+  {
+    "lat": -18.537766,
+    "lng": -131.044132,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Raven"
+    },
+    "title": "Hunting T1 - Raven"
+  },
+  {
+    "lat": -5.06,
+    "lng": -44.208687,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Raven"
+    },
+    "title": "Hunting T1 - Raven"
+  },
+  {
+    "lat": -12.241512,
+    "lng": -66.26426,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Spider"
+    },
+    "title": "Hunting T1 - Spider"
+  },
+  {
+    "lat": -13.603495,
+    "lng": -60.107511,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Spider"
+    },
+    "title": "Hunting T1 - Spider"
+  },
+  {
+    "lat": -12.985914,
+    "lng": -49.4491,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Hawk"
+    },
+    "title": "Hunting T1 - Hawk"
+  },
+  {
+    "lat": 23.1506,
+    "lng": -93.860478,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Hawk"
+    },
+    "title": "Hunting T1 - Hawk"
+  },
+  {
+    "lat": 60.964495,
+    "lng": -126.99981,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Hawk"
+    },
+    "title": "Hunting T1 - Hawk"
+  },
+  {
+    "lat": -8.487815,
+    "lng": -134.341505,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Hawk"
+    },
+    "title": "Hunting T1 - Hawk"
+  },
+  {
+    "lat": 53.290167,
+    "lng": -95.65151,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T1",
+      "resource": "Hawk"
+    },
+    "title": "Hunting T1 - Hawk"
+  },
+  {
+    "lat": 42.961063,
+    "lng": -121.753047,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Raptor"
+    },
+    "title": "Hunting T2 - Raptor"
+  },
+  {
+    "lat": 1.242457,
+    "lng": -73.003488,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Raptor"
+    },
+    "title": "Hunting T2 - Raptor"
+  },
+  {
+    "lat": 32.313189,
+    "lng": -100.148456,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Bork"
+    },
+    "title": "Hunting T2 - Bork"
+  },
+  {
+    "lat": 38.892612,
+    "lng": -115.900156,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Bork"
+    },
+    "title": "Hunting T2 - Bork"
+  },
+  {
+    "lat": 22.094492,
+    "lng": -93.391234,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Bork"
+    },
+    "title": "Hunting T2 - Bork"
+  },
+  {
+    "lat": 33.655088,
+    "lng": -120.835707,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Skinwalker"
+    },
+    "title": "Hunting T2 - Skinwalker"
+  },
+  {
+    "lat": 13.259378,
+    "lng": -86.212319,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Skinwalker"
+    },
+    "title": "Hunting T2 - Skinwalker"
+  },
+  {
+    "lat": 47.890232,
+    "lng": -128.055516,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Skinwalker"
+    },
+    "title": "Hunting T2 - Skinwalker"
+  },
+  {
+    "lat": -3.692453,
+    "lng": -105.24255,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Skinwalker"
+    },
+    "title": "Hunting T2 - Skinwalker"
+  },
+  {
+    "lat": 41.437744,
+    "lng": -102.690086,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Otter"
+    },
+    "title": "Hunting T2 - Otter"
+  },
+  {
+    "lat": -15.244817,
+    "lng": -92.042419,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Otter"
+    },
+    "title": "Hunting T2 - Otter"
+  },
+  {
+    "lat": -9.113665,
+    "lng": -94.139813,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Bullywog"
+    },
+    "title": "Hunting T2 - Bullywog"
+  },
+  {
+    "lat": 26.14808,
+    "lng": -131.0357,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Bullywog"
+    },
+    "title": "Hunting T2 - Bullywog"
+  },
+  {
+    "lat": -7.744859,
+    "lng": -63.838018,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Hippo"
+    },
+    "title": "Hunting T2 - Hippo"
+  },
+  {
+    "lat": 15.640766,
+    "lng": -135.711196,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Hippo"
+    },
+    "title": "Hunting T2 - Hippo"
+  },
+  {
+    "lat": 2.739317,
+    "lng": -48.401855,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Hippo"
+    },
+    "title": "Hunting T2 - Hippo"
+  },
+  {
+    "lat": 8.892244,
+    "lng": -71.790561,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Daystrider"
+    },
+    "title": "Hunting T2 - Daystrider"
+  },
+  {
+    "lat": 63.505052,
+    "lng": -113.047243,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Daystrider"
+    },
+    "title": "Hunting T2 - Daystrider"
+  },
+  {
+    "lat": 45.812723,
+    "lng": -98.34837,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Daystrider"
+    },
+    "title": "Hunting T2 - Daystrider"
+  },
+  {
+    "lat": 3.500889,
+    "lng": -109.01041,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Daystrider"
+    },
+    "title": "Hunting T2 - Daystrider"
+  },
+  {
+    "lat": -20.202963,
+    "lng": -112.896536,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Ram"
+    },
+    "title": "Hunting T2 - Ram"
+  },
+  {
+    "lat": 22.696569,
+    "lng": -101.509633,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T2",
+      "resource": "Ram"
+    },
+    "title": "Hunting T2 - Ram"
+  },
+  {
+    "lat": -8.049797,
+    "lng": -130.896801,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Gryphon"
+    },
+    "title": "Hunting T3 - Gryphon"
+  },
+  {
+    "lat": -3.258223,
+    "lng": -126.838025,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Gryphon"
+    },
+    "title": "Hunting T3 - Gryphon"
+  },
+  {
+    "lat": -11.205362,
+    "lng": -139.30652,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Wyrmling"
+    },
+    "title": "Hunting T3 - Wyrmling"
+  },
+  {
+    "lat": 0.197158,
+    "lng": -53.503772,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Wyrmling"
+    },
+    "title": "Hunting T3 - Wyrmling"
+  },
+  {
+    "lat": 56.459035,
+    "lng": -92.054203,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Wyrmling"
+    },
+    "title": "Hunting T3 - Wyrmling"
+  },
+  {
+    "lat": 60.489714,
+    "lng": -117.403746,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Crocodile"
+    },
+    "title": "Hunting T3 - Crocodile"
+  },
+  {
+    "lat": -16.464778,
+    "lng": -55.462515,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Crocodile"
+    },
+    "title": "Hunting T3 - Crocodile"
+  },
+  {
+    "lat": 21.50695,
+    "lng": -77.799907,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Crocodile"
+    },
+    "title": "Hunting T3 - Crocodile"
+  },
+  {
+    "lat": -14.502669,
+    "lng": -89.039071,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Crocodile"
+    },
+    "title": "Hunting T3 - Crocodile"
+  },
+  {
+    "lat": -1.150153,
+    "lng": -53.194412,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Giant Beetle"
+    },
+    "title": "Hunting T3 - Giant Beetle"
+  },
+  {
+    "lat": 19.556432,
+    "lng": -72.853126,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Giant Beetle"
+    },
+    "title": "Hunting T3 - Giant Beetle"
+  },
+  {
+    "lat": -8.205784,
+    "lng": -97.449327,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Giant Beetle"
+    },
+    "title": "Hunting T3 - Giant Beetle"
+  },
+  {
+    "lat": 4.84811,
+    "lng": -58.742791,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Giant Beetle"
+    },
+    "title": "Hunting T3 - Giant Beetle"
+  },
+  {
+    "lat": -22.004459,
+    "lng": -137.052672,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Giant Beetle"
+    },
+    "title": "Hunting T3 - Giant Beetle"
+  },
+  {
+    "lat": 14.740853,
+    "lng": -69.11132,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Basilisk"
+    },
+    "title": "Hunting T3 - Basilisk"
+  },
+  {
+    "lat": 1.245026,
+    "lng": -121.451996,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Basilisk"
+    },
+    "title": "Hunting T3 - Basilisk"
+  },
+  {
+    "lat": 48.962233,
+    "lng": -111.541032,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Basilisk"
+    },
+    "title": "Hunting T3 - Basilisk"
+  },
+  {
+    "lat": 14.762114,
+    "lng": -134.805502,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Basilisk"
+    },
+    "title": "Hunting T3 - Basilisk"
+  },
+  {
+    "lat": 0.185359,
+    "lng": -67.307579,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Basilisk"
+    },
+    "title": "Hunting T3 - Basilisk"
+  },
+  {
+    "lat": 7.085332,
+    "lng": -103.914418,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Komodo"
+    },
+    "title": "Hunting T3 - Komodo"
+  },
+  {
+    "lat": 23.447249,
+    "lng": -97.447534,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Komodo"
+    },
+    "title": "Hunting T3 - Komodo"
+  },
+  {
+    "lat": 5.30771,
+    "lng": -108.853448,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Komodo"
+    },
+    "title": "Hunting T3 - Komodo"
+  },
+  {
+    "lat": 11.75217,
+    "lng": -126.713812,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Iguana"
+    },
+    "title": "Hunting T3 - Iguana"
+  },
+  {
+    "lat": 0.33669,
+    "lng": -109.291547,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Iguana"
+    },
+    "title": "Hunting T3 - Iguana"
+  },
+  {
+    "lat": 28.842196,
+    "lng": -130.758547,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Iguana"
+    },
+    "title": "Hunting T3 - Iguana"
+  },
+  {
+    "lat": -4.585436,
+    "lng": -117.23631,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Flailrunner"
+    },
+    "title": "Hunting T3 - Flailrunner"
+  },
+  {
+    "lat": 8.014459,
+    "lng": -115.156089,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Flailrunner"
+    },
+    "title": "Hunting T3 - Flailrunner"
+  },
+  {
+    "lat": 3.355595,
+    "lng": -115.88559,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Flailrunner"
+    },
+    "title": "Hunting T3 - Flailrunner"
+  },
+  {
+    "lat": -2.041342,
+    "lng": -101.79463,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Flailrunner"
+    },
+    "title": "Hunting T3 - Flailrunner"
+  },
+  {
+    "lat": -9.860012,
+    "lng": -128.637227,
+    "resourceData": {
+      "group": "Hunting",
+      "grade": "T3",
+      "resource": "Flailrunner"
+    },
+    "title": "Hunting T3 - Flailrunner"
+  }
+]
