@@ -32,7 +32,7 @@ If this repository is hosted on GitHub Pages, you can access it directly:
 
 1. **Download the project**
    ```bash
-   git clone https://github.com/yourusername/aoc-free-map.git
+   git clone https://github.com/DmitriyNagorniy/aoc-free-map.git
    cd aoc-free-map
    ```
 
