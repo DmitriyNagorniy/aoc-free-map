@@ -2,6 +2,8 @@
 
 A standalone, browser-based interactive map application for tracking resources in Ashes of Creation. Save markers locally, export/import your data, and share with friends - all without any server requirements.
 
+<a href="https://dmitriynagorniy.github.io/aoc-free-map/">https://dmitriynagorniy.github.io/aoc-free-map/</a>
+
 <img width="1103" height="915" alt="image" src="https://github.com/user-attachments/assets/0272e8b5-5705-47da-b9d4-c8e90746ccc5" />
 
 
