@@ -4,6 +4,9 @@ A standalone, browser-based interactive map application for tracking resources i
 
 <a href="https://dmitriynagorniy.github.io/aoc-free-map/">https://dmitriynagorniy.github.io/aoc-free-map/</a>
 
+Check other projects:
+[https://github.com/DmitriyNagorniy/aoc-free-armory](https://github.com/DmitriyNagorniy/aoc-free-armory)
+
 <img width="1103" height="915" alt="image" src="https://github.com/user-attachments/assets/0272e8b5-5705-47da-b9d4-c8e90746ccc5" />
 
 
